@@ -35,6 +35,7 @@ body {
     font-weight: 700;
     background-color: $primary-color;
     color: white;
+    padding: 14px 45px;
   }
 
   &--outline {
@@ -82,26 +83,24 @@ body {
       transform: translate(-50%, 50%);
     }
   }
+
+  &--shadow {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 90%;
+      height: 100%;
+      transform: translate(-50%, 50%);
+      background: rgba(245, 56, 56, 0.35);
+      filter: blur(27px);
+      border-radius: inherit;
+    }
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $heading-color;
-  font-weight: bold;
-}
-
-.heading {
-  font-weight: 500;
-  font-size: 35px;
-  line-height: calc(50 / 35);
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-
-.text {
-  line-height: calc(30 / 16);
+.is-active {
+  border-color: $primary-color !important;
 }

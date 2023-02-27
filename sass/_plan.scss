@@ -1,8 +1,8 @@
 .plan {
-  padding: 80px 0 150px 0;
-  background-color: $gray-light-color;
-  &-container {
-  }
+  padding: 80px 0 30px 0;
+  background: linear-gradient(180deg, #f8f8f8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+  // &-container {
+  // }
   &-header {
     max-width: 555px;
     margin: 0 auto 60px;
@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 50px;
+    margin-bottom: 150px;
   }
   &-item {
     background: #ffffff;
@@ -37,10 +38,15 @@
     display: flex;
     align-items: center;
     gap: 0 25px;
-    margin-bottom: 15px;
     font-size: 14px;
     text-align: left;
+    line-height: calc(30 / 14);
   }
+
+  &-info:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   &-price {
     font-size: 25px;
     font-weight: 500;
@@ -48,7 +54,7 @@
   }
 
   &-info-wrap {
-    margin-bottom: 130px;
+    margin-bottom: 50px;
     min-height: 230px;
     min-width: 191px;
   }
@@ -61,7 +67,7 @@
     padding: 13px 45px;
   }
 
-  &-item--border {
-    border: 2px solid $primary-color;
+  &-item:hover {
+    border-color: $primary-color;
   }
 }
